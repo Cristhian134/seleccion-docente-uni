@@ -1,0 +1,34 @@
+<header>
+  <div>
+    <div>
+      <div class="sidenav__mobilewrapper">
+        <div class="sidenav__mobilebutton" id="toggleBtnMobile">
+          <i class="fa fa-bars" aria-hidden="true"></i>
+        </div>
+      </div>
+      <span class="header__facultad">Facultad: {{ facultad }}</span>
+    </div>
+    <div class="header__info">
+      <div class="header__usuario">
+        {{ usuario }}
+      </div>
+      <span class="header__me dropdown">
+        <div class="dropdown-content">
+          <p><strong>Rol:</strong> {{ rol }}</p>
+          <p><strong>Código:</strong> {{ codigo }}</p>
+          <p><strong>Facultad:</strong> {{ facultad }}</p>
+          <form action="{% url 'logout' %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn btn-block">Cerrar sesión</button>
+          </form>
+          {% if admin %}
+          </br>
+          <a href="/admin/">
+            <button type="submit" class="btn btn-block">Panel de Administración</button>
+          </a>
+          {% endif %}
+        </div>
+      </span>
+    </div>
+  </div>
+</header>

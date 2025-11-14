@@ -1,0 +1,23 @@
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: var(--t-size-sm);
+  font-family: inherit;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--c-gray-light-2);
+  background-color: var(--c-white);
+  color: var(--c-gray-dark-3);
+  transition:
+    border-color var(--transition),
+    box-shadow var(--transition);
+}
+
+input:focus,
+select:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--c-primary);
+  box-shadow: 0 0 0 1px var(--c-primary-soft);
+}
