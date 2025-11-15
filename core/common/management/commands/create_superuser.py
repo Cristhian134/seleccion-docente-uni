@@ -36,8 +36,8 @@ class Command(BaseCommand):
         "nombre": "root",
         "apellido_pat": "ap",
         "apellido_mat": "am",
-        "dni": "00000000",
-        "correo": "root@example.com",
+        "dni": "12345678",
+        "correo": "root@gmail.com",
         "telefono": "999999999",
         "genero": "M",
 
