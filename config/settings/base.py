@@ -53,6 +53,11 @@ LOCAL_APPS = [
 
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
+AUTHENTICATION_BACKENDS = [
+  'core.autenticacion.backend.DNIOrEmailBackend',
+  'django.contrib.auth.backends.ModelBackend',
+]
+
 # ------------------------------
 # Middlewares
 # ------------------------------
