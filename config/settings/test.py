@@ -10,7 +10,7 @@ ALLOWED_HOSTS = ["*"]
 # Base de datos en memoria para acelerar la ejecución de pruebas
 DATABASES = {
     "default": {
-        "ENGINE": "django.db.backends.sqlite3",
+        "ENGINE": "django.db.backends.postgresql",
         "NAME": ":memory:",
     }
 }
