@@ -11,10 +11,13 @@ ALLOWED_HOSTS = ["*"]
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "NAME": ":memory:",
+        "NAME": "test_db",
+        "USER": "test_user",
+        "PASSWORD": "test_pass",
+        "HOST": "127.0.0.1",
+        "PORT": "5432",
     }
 }
-
 
 # Hashing rápido para tests
 PASSWORD_HASHERS = ["django.contrib.auth.hashers.MD5PasswordHasher"]
